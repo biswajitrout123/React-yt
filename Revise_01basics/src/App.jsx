@@ -1,5 +1,6 @@
 import sizuka from './assets/image.png'
 import User from './components/User'
+import Card from './components/Card'
 
 function App() {
   
@@ -7,13 +8,12 @@ function App() {
   return (
     <>
     <div>
-      <img src={sizuka} alt="hello" />
-      <img src="/vite.svg" alt="vite" />
-      <img src={User} alt="" />
+      <Card />
     </div>
     </>
   )
 }
 
 export default App
+
 
