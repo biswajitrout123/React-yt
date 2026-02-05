@@ -1,13 +1,13 @@
 import './App.css'
-import Button from './components/Button'
-import Header from './components/Header'
+import Button from './components/button/Button'
+import Header from './components/header/Header'
 
 function App() {
 
   return (
     <>
-    <Header /> 
     <Button/>
+    <Header /> 
     </>
   )
 }
