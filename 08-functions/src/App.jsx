@@ -1,16 +1,22 @@
 import React from 'react'
 
 const App = () => {
-
-  function inputChanging() {
-    console.log('User is Typing');
+  const pageScrolling = (elem) => {
+    if(elem > 0) {
+      console.log('seedha scrolling');
+    }else {
+      console.log('ulta scrolling');
+    }
+    
     
   }
   return (
-    <div>
-      <div>
-        <input onChange={inputChanging} type="text" placeholder='Enter Name' />
-      </div>
+    <div onWheel={(elem) => {      
+      pageScrolling(elem.deltaY)
+    }}>
+      <div className="page1"></div>
+      <div className="page2"></div>
+      <div className="page3"></div>
     </div>
   )
 }
