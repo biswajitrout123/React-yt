@@ -1,5 +1,5 @@
 import React from 'react'
-import 'remixicon/fonts/remixicon.css'
+
 
 const JobCard = () => {
   return (
@@ -10,6 +10,8 @@ const JobCard = () => {
         {/* Top section */}
         <div>
           <p className="text-sm font-semibold">$120/hr</p>
+          <i className="ri-nike-fill"></i>
+          {/* <img  src="<Bookmark />" alt="" /> */}
           <h2 className="text-2xl font-semibold mt-4">
             Senior UI Developer
           </h2>
