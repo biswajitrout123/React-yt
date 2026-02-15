@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgb(6, 158, 158);
+}
+
+body{
+    background-color: rgb(18, 11, 7);
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+}
