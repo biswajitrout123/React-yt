@@ -9,15 +9,19 @@ const App = () => {
   const [index, setIndex] = useState(1)
 
   const getData = async () => {
-
-    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=10`)
-    setUserData(response.data)
-
+    try {
+      const response = await axios.get(
+        `https://picsum.photos/v2/list?page=${index}&limit=10`
+      )
+      setUserData(response.data)
+    } catch (error) {
+      console.log("Error fetching data", error)
+    }
   }
 
   useEffect(function () {
     getData()
-  },[index])
+  }, [index])
 
 
   let printUserData = <h3 className='text-gray-300 text-xs absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold'>Loading...</h3>
@@ -37,9 +41,13 @@ const App = () => {
         {printUserData}
       </div>
       <div className='flex justify-center gap-6 items-center p-4'>
-        <button className='bg-amber-400 text-sm  cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'
+
+
+        <button
+          style={{ opacity: index == 1 ? 0.5 : 1 }}
+          className='bg-amber-400 text-sm  cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'
           onClick={() => {
-            if(index > 1) {
+            if (index > 1) {
               setIndex(index - 1)
               setUserData([])
 
@@ -48,7 +56,7 @@ const App = () => {
         >
           Prev</button>
 
-          <h4>Page {index}</h4>
+        <h4>Page {index}</h4>
 
 
 
