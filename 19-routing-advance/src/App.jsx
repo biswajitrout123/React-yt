@@ -9,14 +9,26 @@ import NotFound from './pages/NotFound'
 import Women from './pages/Women'
 import Mens from './pages/Mens'
 import Kids from './pages/Kids'
+import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
+import Navbar2 from './components/Navbar2'
 
 const App = () => {
   return (
     <div className='h-screen bg-black text-white'>
       <Navbar />
+      <Navbar2 />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/courses/:courseId' element={<CourseDetail />}/>
+
+
+        {/* DYNAMIC ROUTE */}
+        <Route path='/courses' element={<Courses />}/>
+
+
+        {/* NESTED ROUTE */}
         <Route path='/Product' element={<Product />}>
           <Route path='mens' element={<Mens />} />
           <Route path='women' element={<Women />} />
