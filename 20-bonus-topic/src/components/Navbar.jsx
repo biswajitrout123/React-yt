@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Navbar = (props) => {
-    console.log(props);
+  console.log(props);
 
-    function changeTheme() {
-        props.setTheme('dark')
-        
-    }
+  function changeTheme() {
+    props.setTheme('dark')
+
+  }
 
   return (
     <div>
@@ -16,3 +16,4 @@ const Navbar = (props) => {
 }
 
 export default Navbar
+
