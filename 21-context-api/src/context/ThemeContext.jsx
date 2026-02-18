@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
-const ThemeContext = () => {
+export const ThemeDataContext = createContext()
+
+const ThemeContext = (props) => {
   return (
     <div>
-      Theme Context
+      {/* {props.children} */}
+      
     </div>
   )
 }
